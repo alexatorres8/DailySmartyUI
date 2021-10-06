@@ -1,5 +1,5 @@
-import ReactDOM from 'react-dom';
 import React from 'react';
+import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
@@ -19,7 +19,7 @@ function main() {
     <Provider store={createStoreWithMiddleware(reducers)}>
       <BrowserRouter>
         <Switch>
-          <Route path='/' component={Home}/>
+          <Route path='/' exact component={Home}/>
           <Route path='/results' component={Results}/>
         </Switch>
       </BrowserRouter>
